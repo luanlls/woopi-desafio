@@ -1,0 +1,49 @@
+<div class="container" *ngIf="usuarioService.lista">
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th>nome: </th>
+                <th>idade: </th>
+                <th>e-mail: </th>
+                <th>telefone: </th>
+                <th>endereco: </th>
+                <th>gênero favorito:</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngIf="usuarioService.contador == 0">
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+
+            <tr *ngFor="let users of usuarioService.usuario;">
+                <td>{{users.nome}}</td>
+                <td>{{users.idade}}</td>
+                <td>{{users.email}}</td>
+                <td>{{users.tel}}</td>
+                <td>{{users.endereco}}</td>
+                <td
+                [ngClass]="{'acao': users.preferencias == 'ação',
+                            'aventura': users.preferencias == 'aventura',
+                            'biografico': users.preferencias == 'biográfico',
+                            'comedia': users.preferencias == 'comédia',
+                            'historico': users.preferencias == 'histórico',
+                            'drama': users.preferencias == 'drama',
+                            'fantasia': users.preferencias == 'fantasia',
+                            'ficcao-cientifica': users.preferencias == 'ficção científica',
+                            'musical': users.preferencias == 'musical',
+                            'romance': users.preferencias == 'romance',
+                            'terror': users.preferencias == 'terror'
+            }">
+                    {{users.preferencias}}
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

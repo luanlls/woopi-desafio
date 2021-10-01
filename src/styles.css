@@ -1,1 +1,342 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141414;
+    color: white;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+/*header container ----------------------------------------------------------------------*/
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: 100;
+    font-style: oblique;
+}
+
+.logo span {
+    color: #1E90FF;
+}
+
+header div nav {
+    margin-right: 10px;
+}
+
+header div nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header div nav a:hover {
+    color: #fff;
+}
+/*header container ----------------------------------------------------------------------------------*/
+
+/*introdução ----------------------------------------------------------------------------------------*/
+.filme-fundo {
+    background: linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)100%), url('img/teste4.jpg');
+    height: 425px;
+
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.logoi {
+    background-color: transparent;
+
+    font-size: 50px;
+
+    padding: 125px;
+
+    font-weight: 100;
+    font-style: oblique;
+}
+
+.indieflix {
+    background-color: transparent;
+    padding: 5px;
+    font-size: 60px;
+}
+
+.flix {
+    background-color: transparent;
+    color: #1E90FF;
+}
+
+.obs {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.introducao{
+    text-align: center;
+}
+
+.botao {
+    background-color: rgba(0,0,0,.60);
+    border-style: hidden;
+    border-radius: 5px;
+    color: white;
+
+    padding: 20px 25px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+
+.botao:hover {
+    background-color: white;
+    color: black;
+}
+/*introdução ----------------------------------------------------------------------------------------*/
+
+.usuario-botao {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.usuario-botao span{
+    color: #1E90FF;
+}
+
+#criar {
+    font-size: 25px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#criar span{
+    color: #1E90FF;
+}
+
+.usuarios {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 28px;
+    font-weight: 100;
+}
+
+/*formulario ----------------------------------------------------------------------------------------*/
+
+.divform {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.formulario {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    font-weight: 100;
+
+    text-align: start;
+}
+
+.form-group {
+    padding-bottom: 10px;
+}
+
+.form-control {
+    font-size: 20px;
+    border-radius: 3px;
+    border-style: hidden;
+    padding: 5px;
+
+    width: 450px;
+    height: 25px;
+
+    color: black;
+}
+
+#idade-input {
+    width: 50px;
+}
+
+.idade {
+    margin-left: 100px;
+}
+
+.tel {
+    margin-left: 100px;
+}
+
+#tel-input {
+    width: 150px;
+}
+
+.genero {
+    margin-left: 100px;
+}
+
+#gen-select {
+    font-size: 20px;
+    border-radius: 3px;
+}
+
+/*reatividade ----------------------------------------------------------------------------------------*/
+
+.botao-salvar-f {
+    background-color: rgba(0,0,0,.60);
+    border-style: hidden;
+    border-radius: 5px;
+    color: white;
+
+    padding: 20px 25px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    
+    cursor: pointer;
+}
+
+.botao-salvar-t {
+    background-color: rgba(0,0,0,.60);
+    border-style: hidden;
+    border-radius: 5px;
+    color: white;
+
+    padding: 20px 25px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+
+.botao-salvar-t:hover {
+    background-color: rgba(30,144,255,.60);
+}
+
+.ponto {
+    color: #1E90FF;
+}
+
+.salvar-mensagem {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+}
+
+.mensagem {
+    font-size: 20px;
+    padding: 20px 25px;
+}
+
+.maiores {
+    color: #d30e39;
+}
+
+/*lista ----------------------------------------------------------------------------------------*/
+
+.container {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+
+    font-size: 22px;
+    font-weight: 100;
+
+    background-color: white;
+    color: #141414;
+
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,.40);
+
+    min-width: 400px;
+}
+
+.content-table thead tr {
+    background-color: #1E90FF;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th, .content-table td {
+    padding: 15px 25px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #bbbbbb;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom:  2px solid #1E90FF;
+}
+
+/*cores ----------------------------------------------------------------------------------------*/
+
+.acao {
+    color:#8B0000;
+}
+
+.aventura {
+    color: #8B008B;
+}
+
+.biografico {
+    color: #2F4F4F;
+}
+
+.comedia {
+    color: #FF4500;
+}
+
+.historico {
+    color: #B8860B;
+}
+
+.drama {
+    color: #6A5ACD;
+}
+
+.fantasia {
+    color: #1E90FF;
+}
+
+.ficcao-cientifica {
+    color: #BA55D3;
+}
+
+.musical {
+    color: #FF6347;
+}
+
+.romance {
+    color: #DC143C;
+}
+
+.terror {
+    color: #DB7093;
+}

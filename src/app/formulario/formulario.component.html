@@ -1,0 +1,78 @@
+<header>
+    <div class="container">
+        <h1 class="logo">indie<span>flix.</span> </h1>
+
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Séries</a>
+            <a href="#">Filmes</a>
+            <a href="#">Documentários</a>
+        </nav>
+    </div>
+
+
+</header>
+
+<div class="filme-fundo">
+    <h1 class="logoi">
+        bem vindo<br>
+        ao<br>
+        <span class="indieflix">indie<span class="flix">flix.</span></span>
+        <p class="obs">- os melhores filmes estão aqui!</p>
+    </h1>
+</div>
+
+<div class="forms-fundo">
+    <div class="usuario-botao">
+        <p class="usuarios">Usuarios: </p>
+        <div>
+            <button *ngIf="!clickedCriar" type="button" (click)="setButtonCriarTrue()" class="botao" id="criar">crie uma
+                conta<span>.</span></button>
+        </div>
+    </div>
+
+    <div class="divform">
+        <form *ngIf="clickedCriar" class="formulario">
+
+            <div class="form-group" id="nome-idade">
+                <label for="nome" class="nome">nome: <br></label>
+                <input type="text" class="form-control" id="nome-input" name="nome" [(ngModel)]="nome">
+                <label for="idade" class="idade">idade: </label>
+                <input type="number" name="idade" class="form-control" id="idade-input" [(ngModel)]="idade">
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="email">e-mail: <br></label>
+                <input type="email" class="form-control" id="email-input" name="email" [(ngModel)]="email">
+                <label for="tel" class="tel">telefone: </label>
+                <input type="tel" class="form-control" required placeholder="(xx) xxxxx-xxxx" id="tel-input" name="tel"
+                    [(ngModel)]="tel">
+            </div>
+
+            <div class="form-group">
+                <label for="endereco" class="endereco">endereço: <br></label>
+                <input type="text" class="form-control" id="end-input" name="endereco" [(ngModel)]="endereco">
+
+                <label for="preferencias" class="genero">gênero de filme favorito: </label>
+                <select class="form_control" id="gen-select" name="preferencias" [(ngModel)]="preferencias">
+                    <option value="ação">ação</option>
+                    <option value="aventura">aventura</option>
+                    <option value="biográfico">biográfico</option>
+                    <option value="comédia">comédia</option>
+                    <option value="histórico">histórico</option>
+                    <option value="drama">drama</option>
+                    <option value="fantasia">fantasia</option>
+                    <option value="ficção científica">ficção científica</option>
+                    <option value="musical">musical</option>
+                    <option value="romance">romance</option>
+                    <option value="terror">terror</option>
+                </select>
+            </div>
+
+            <div class="salvar-mensagem">
+            <button type="button" (click)="addUsuario()" [ngClass]="{'botao-salvar-f': idade < 18, 'botao-salvar-t': idade >= 18}"> Salvar<span class="ponto">.</span></button>
+            <p *ngIf="menorIdade" class="mensagem">somente <span class="maiores">maiores de idade</span> podem fazer o cadastro<span class="ponto">.</span></p>
+            </div>
+        </form>
+    </div>
+</div>
